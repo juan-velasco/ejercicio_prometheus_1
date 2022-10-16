@@ -1,0 +1,7 @@
+scrape_configs:
+  - job_name: "prometheus"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:9090"] # con esto conseguimos que prometheus recopile métricas de sí mismo
+        labels:
+          env: local
